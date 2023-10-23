@@ -7,26 +7,94 @@
 </head>
 <body>
     <div class="border-b-2">
-        <div class="h-12 mx-auto flex items-center">
+        <div class="h-12 mx-auto flex items-center sticky top-0 bg-slate-300">
             <div class="ml-5 h-full w-1/2 flex">
                 <div class=" w-20 border-r-2 h-full text-sm hover:text-cyan-500 transition-colors cursor-pointer flex items-center justify-center">Nike</div>
                 <div class=" w-32 border-r-2 h-full text-sm hover:text-cyan-500 transition-colors cursor-pointer flex items-center justify-center">Nike 會員</div>
                 <div class=" w-12 border-r-2 h-full text-sm hover:text-cyan-500 transition-colors cursor-pointer flex items-center justify-center">⛹🏿</div>
             </div>
             <div class="h-full w-1/2 flex justify-end">
-                <div class=" w-20 border-l-2 h-full text-sm hover:text-cyan-500 transition-colors cursor-pointer flex items-center justify-center">加入 / 登入</div>
-                <div class=" w-16 border-l-2 h-full text-sm hover:text-cyan-500 transition-colors cursor-pointer flex items-center justify-center">幫助</div>
-                <div class=" w-12 border-l-2 h-full text-sm hover:text-cyan-500 transition-colors cursor-pointer flex items-center justify-center">💬</div>
-                <div class=" w-12 border-l-2 h-full text-sm hover:text-cyan-500 transition-colors cursor-pointer flex items-center justify-center">🛒</div>
-                <div class=" w-20 border-l-2 h-full text-sm hover:text-cyan-500 transition-colors cursor-pointer flex items-center justify-center">收藏</div>
-                <div class=" w-20 border-l-2 h-full text-sm hover:text-cyan-500 transition-colors cursor-pointer flex items-center justify-center">繁 / EN</div>
-                <div class=" w-20 border-l-2 h-full text-sm hover:text-cyan-500 transition-colors cursor-pointer flex items-center justify-center">📍香港</div>
+                <div class=" w-20 h-full text-sm hover:text-cyan-500 transition-colors cursor-pointer flex items-center justify-center">加入 / 登入</div>
+                <div class=" w-16 h-full text-sm hover:text-cyan-500 transition-colors cursor-pointer flex items-center justify-center">幫助</div>
+                <div class=" w-12 h-full text-sm hover:text-cyan-500 transition-colors cursor-pointer flex items-center justify-center">💬</div>
+                <div class=" w-12 h-full text-sm hover:text-cyan-500 transition-colors cursor-pointer flex items-center justify-center">🛒</div>
+                <div class=" w-20 h-full text-sm hover:text-cyan-500 transition-colors cursor-pointer flex items-center justify-center">收藏</div>
+                <div class=" w-20 h-full text-sm hover:text-cyan-500 transition-colors cursor-pointer flex items-center justify-center">繁 / EN</div>
+                <div class=" w-20 h-full text-sm hover:text-cyan-500 transition-colors cursor-pointer flex items-center justify-center">📍香港</div>
             </div>
         </div>
             
-            <div class="h-20 mx-auto flex items-center bg-cyan-500"></div>
-            <div class="h-32 mx auto flex items-center bg-cyan-700"></div>
-            <div class="bg-https://static.nike.com.hk/resources/template/kvFullNewModule7/24435885125875845.jpg"></div>
+        <div class="h-16 mx-auto flex items-center bg-cyan-500">    </div>
+
+            <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <main class="h-20 w-full justify-center bg-gray-900">
+    <div x-data="imageSlider" class="relative overflow-hidden rounded-md bg-gray-100 p-2 sm:p-4">
+        <div class="absolute right-5 top-5 z-10 rounded-full bg-gray-600 px-2 text-center text-sm text-white">
+            <span x-text="currentIndex"></span>/<span x-text="images.length"></span>
+        </div>
+
+        <button @click="previous()" class="absolute left-5 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-gray-100 shadow-md">
+            <i class="fas fa-chevron-left text-2xl font-bold text-gray-500"></i>
+        </button>
+
+        <button @click="forward()" class="absolute right-5 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-gray-100 shadow-md">
+            <i class="fas fa-chevron-right text-2xl font-bold text-gray-500"></i>
+        </button>
+
+        <div class="h-24 w-2/6">
+                <div x-show="currentIndex == index + 1" x-transition:enter="transition transform duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition transform duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="absolute top-0">
+                    <img :src="images" alt="image" class="rounded-sm" />
+                </div>
+        </div>
     </div>
+</main>
+<br>
+<br>
+    <div class="w-full h-48">
+        <img src="https://static.nike.com.hk/resources/template/kvFullNewModule6/54775338414705122.jpg" alt="">
+    </div>
+<br> <br> <br> <br> <br>
+    <div class="w-full h-48">
+        <img src="https://static.nike.com.hk/resources/template/kvFullNewModule1/55287501272650238.jpg" alt="">
+    </div>
+<br> <br> <br> <br> <br> <br> <br>
+    <div class="w-240 h-140 flex justify-center ">
+        <img src="https://static.nike.com.hk/resources/template/kvFullNewModule5/55368133180294677.png" alt="">
+    </div>
+<br> <br> <br>
+    <div class="h-auto flex justify-center font-bold">
+        Jordan Family Day 最新焦點
+    </div>
+    <div class="h-auto flex justify-center font-bold text-8xl">
+        看我這1代
+    </div>
+    <div class="h-auto flex justify-center font-bold">
+        煥新經典 解鎖專屬主場
+    </div>
+
+<script>
+  document.addEventListener("alpine:init", () => {
+    Alpine.data("imageSlider", () => ({
+      currentIndex: 1,
+      images: [
+        "sAdfvavdfcadvcvdva",
+        "dsavzdzv as",
+        "LGek,ahvbk",
+      ],
+      previous() {
+        if (this.currentIndex > 1) {
+          this.currentIndex = this.currentIndex - 1;
+        }
+      },
+      forward() {
+        if (this.currentIndex < this.images.length) {
+          this.currentIndex = this.currentIndex + 1;
+        }
+      },
+    }));
+  });
+</script>
 </body>
-</html>
+</html> 
